@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactMe</title>
+
+    <!--Adding Fonts from Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <!--Normalizyng WebPage
+        Method One:
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        Method Two:-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!--Link styles.css sheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+
+    <!-- Enable Viewport to optimize view for smaller devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- Including the logo and the main navigation -->
+    <header class="page-header">
+        <!-- Add Logo Here -->
+        <!--<img src="http://via.placeholder.com/200x70" alt="logo">-->
+        <img src="img/mainlogo.svg"
+            alt="Personal logo of Alex's Company. The logo represents the Software Product offered by Alex's Company"
+            class="page-header__item">
+
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="./index.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item-active">Home</a>
+                </li>
+
+                <li role="presentation">
+                    <a href="./about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                    <!--<a href="about.html#about" target="_blank">About</a>-->
+                    <!--Points to a section in about.html page-->
+                </li>
+
+                <li role="presentation">
+                    <a href="./work.html" role="menuitem" class="navigation-list__item">Work</a>
+                </li>
+
+                <li role="presentation">
+                    <a href="./contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Contact Me</h2>
+            <h3>Alexis Edson</h3>
+            <p>5890 Shindler Drive</p>
+            <p>32222, Jacksonville</p>
+            <p>Florida, USA</p>
+            Call me: <a href="tel +1 9047493527">click here to call me</a><br>
+            Skype: <a href="skype:msae26">msae26</a><br>
+            E-mail: <a href="mailto:msae26@hotmail.com">msae26@hotmail.com</a>
+        </article>
+
+        <form action="" method="post">
+            <h2>Enter your information</h2>
+            <label class="standard-label" for="contact-email">E-mail: </label>
+            <input type="email" id="contact-email" required="required" placeholder="Enter your email address">
+            <br>
+
+            <label class="standard-label" for="tel">Telephone: </label>
+            <input type="tel" id="tel" name="tel" required="required" maxlength="13" minlength="13"
+                placeholder="Ex. 555-555-555-5555" pattern="[0-9]{3}[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <br>
+
+            <label class="standard-label" for="message">Message: </label>
+            <textarea id="message" required="required" maxlength="240" placeholder="Here write a message"></textarea>
+            <br>
+
+            <input type="submit" value="Send message">
+        </form>
+    </main>
+
+    <footer>
+        <p>Find more about me on</p>
+
+        <!--Logo GitHub-->
+        <a href="https://github.com/msae26" target="_blank">
+            <!--<img src="http://via.placeholder.com/30x30" alt="Github">-->
+            <img src="img/logo_github_30x30.svg"
+                alt="Logo Github. Clicking the Github logo will take you to my Alex's Github profile"></a>
+
+        <!--Logo Twitter-->
+        <a href="https://twitter.com/assantos26" target="_blank">
+            <!--<img src="http://via.placeholder.com/30x30" alt="Twitter">-->
+            <img src="img/logo_twitter_30x30.svg"
+                alt="Logo Twitter. Clicking the Twitter logo will take you to my Alex's Twitter profile"></a>
+
+        <!--Logo Linkedin-->
+        <a href="https://www.linkedin.com/in/alexisedson" target="_blank">
+            <!--<img src="http://via.placeholder.com/30x30" alt="LinkedIn">-->
+            <img src="img/logo_linkedin_30x30.svg"
+                alt="Logo LinkedIn. Clicking the LinkedIn logo will take you to my Alex's LinkedIn profile"></a>
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>

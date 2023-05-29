@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Alexis Edson - Portoflio</title>
+    <link rel="shorcut icon" href="favicon.ico" type="image/x-ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--Adding Fonts from Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <!--Normalizyng WebPage
+        Method One:
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        Method Two:-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!--Link styles.css sheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+
+    <!-- Enable Viewport to optimize view for smaller devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- Including the logo and the main navigation -->
+    <header class="page-header">
+        <!-- Add Logo Here -->
+        <!--<img src="http://via.placeholder.com/200x70" alt="logo">-->
+        <img src="img/mainlogo.svg"
+            alt="Personal logo of Alex's Company. The logo represents the Software Product offered by Alex's Company"
+            class="page-header__item">
+
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">  <!-- Class added to take out the dots with CSS-->
+                <li role="presentation">
+                    <a href="./index.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item-active">Home</a>
+                </li>
+
+                <li role="presentation">
+                    <a href="./about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                    <!--<a href="about.html#about" target="_blank">About</a>-->
+                    <!--Points to a section in about.html page-->
+                </li>
+
+                <li role="presentation">
+                    <a href="./work.html" role="menuitem" class="navigation-list__item">Work</a>
+                </li>
+
+                <li role="presentation">
+                    <a href="./contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile">
+            <!--<img src="http://via.placeholder.com/150x150" alt="Alex Soto Portrait">-->
+            <img src="img/alex-soto-portrait.svg" class="profile__portrait"
+                alt="This is an Alex's Portrait, this photo was taken in Pisa, Italy">
+
+            <h1>Hello World!</h1>
+            <p>
+                My name is Alexis Edson.
+            </p>
+            <p>
+                I am a <span>web</span> Developer from The United States of America.
+            </p>
+
+            <a href="#">Check out some of my code</a>
+        </div>
+<!--
+        <a href="#">Default Link</a>
+        <button type="button">Default Button</button>
+        <button class="button_secondary">Secondary Button</button>
+-->
+    </main>
+
+    <footer class="page-footer">
+        <p>Find more about me on</p>
+
+        <div class="social-media">
+            <!--Logo GitHub-->
+            <a href="https://github.com/msae26" target="_blank">
+                <!--<img src="http://via.placeholder.com/30x30" alt="Github">-->
+                <img src="img/logo_github_30x30.svg"
+                    alt="Logo Github. Clicking the Github logo will take you to Alex's Github profile"></a>
+
+            <!--Logo Twitter-->
+            <a href="https://twitter.com/assantos26" target="_blank">
+                <!--<img src="http://via.placeholder.com/30x30" alt="Twitter">-->
+                <img src="img/logo_twitter_30x30.svg"
+                    alt="Logo Twitter. Clicking the Twitter logo will take you to Alex's Twitter profile"></a>
+
+            <!--Logo Linkedin-->
+            <a href="https://www.linkedin.com/in/alexisedson" target="_blank">
+                <!--<img src="http://via.placeholder.com/30x30" alt="LinkedIn">-->
+                <img src="img/logo_linkedin_30x30.svg"
+                    alt="Logo LinkedIn. Clicking the LinkedIn logo will take you to Alex's LinkedIn profile"></a>
+        </div>
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
