@@ -21,8 +21,6 @@
     --font-size-h3: 18px;
 
     --font-weight: 700;
-
-
 }
     
 /* --------------GENERAL BODY--------------- */
@@ -34,6 +32,12 @@ body {
     font-size: var(--font-size-body);
     /* Sets line-height to 1.6. Used to set distance between lines of texthow  */
     line-height: var(--line-height-doby);
+}
+
+main, section {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -53,8 +57,7 @@ h3 {
 
 a {
     /*color: #357b70;       Replaced using variables */
-    color: var(--primary-color);
-    
+    color: var(--primary-color);    
 }
 
 /* For Interactive Elements */
@@ -145,18 +148,56 @@ button:hover, button:focus, .button:hover, .button:focus {
     text-align: right;
 }
 
-.navigation-list {
+.nav-list {
     list-style-type: none;
 }
 
-.navigation-list li {
+.nav-list li {
     display: inline-block;
     margin-left: 15px;
+    font-weight: 700;
 }
 
-.navigation-list__item {
-    text-decoration: none;
+.nav-list__item--active {
+    text-decoration: none;    
 }
+
+nav a {
+    text-decoration: none;
+    position: relative;   
+}
+
+/* Border Out Animation */
+.border-out a::before, .border-out a::after {
+    position: absolute;    
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;    
+}
+
+.border-out a::before
+{
+    top: 0px;
+    transform: translateY(30px);    
+}
+
+.border-out a::after
+{
+    bottom: 0px;
+    transform: translateY(-30px);    
+}
+
+.border-out a:hover::before, .border-out a:hover::after
+{
+    opacity: 1;
+    transform: translateX(0)
+}
+
+
 /* -------FOOTER--------- */
 
 .page-footer {
@@ -190,7 +231,7 @@ button:hover, button:focus, .button:hover, .button:focus {
         padding: 10px;
         width: auto;
         min-height: auto;
-        margin: 0;         
+        /*margin: 0;         */
     }
     
     .grid__item:last-child {

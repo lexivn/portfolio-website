@@ -136,16 +136,16 @@ button:hover, button:focus, .button:hover, .button:focus {
     text-align: right;
 }
 
-.navigation-list {
+.nav-list {
     list-style-type: none;
 }
 
-.navigation-list li {
+.nav-list li {
     display: inline-block;
     margin-left: 15px;
 }
 
-.navigation-list__item {
+.nav-list__item {
     text-decoration: none;
 }
 /* -------FOOTER--------- */
