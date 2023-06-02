@@ -6,7 +6,7 @@
 */
 
 /* ------CSS Variables & Postprocessors------ */
-    
+
 /* --------------GENERAL BODY--------------- */
 body {
     /*background-color: lightgray;   */
@@ -18,7 +18,8 @@ body {
     line-height: 1.6;
 }
 
-main, section {
+main,
+section {
     width: 90%;
     max-width: 1500px;
     margin: 0 auto;
@@ -26,26 +27,30 @@ main, section {
 
 h1 {
     font-size: 30px;
-    font-weight: 700; /*Blackness and Stroke thickness*/
+    font-weight: 700;
+    /*Blackness and Stroke thickness*/
 }
 
 h2 {
     font-size: 24px;
-    font-weight: 700; /*Blackness and Stroke thickness*/
+    font-weight: 700;
+    /*Blackness and Stroke thickness*/
 }
 
 h3 {
     font-size: 18px;
-    font-weight: 700; /*Blackness and Stroke thickness*/
+    font-weight: 700;
+    /*Blackness and Stroke thickness*/
 }
 
 a {
     /*color: #357b70;       Replaced using variables */
-    color: #357b70;    
+    color: #357b70;
 }
 
 /* For Interactive Elements */
-a:hover, a:focus {
+a:hover,
+a:focus {
     /* No underlining when hovering over a link; Focus when using the keybboard */
     text-decoration: none;
 }
@@ -71,7 +76,7 @@ button {
     /* Styles the background color, font color, and text decoration
     (underline, etc.) of the button */
     background-color: #357b70;
-    color: #ffff; 
+    color: #ffff;
     text-decoration: none;
     /* Adds spacing to the button (This will be discussed more
     in depth later) */
@@ -79,7 +84,7 @@ button {
     border-radius: 10px;
     /* Gives the button a bottom border with a width of 2px, a type
     of solid, an a color in RGBA format */
-    border-bottom: 2px solid rgba(0,0, 0, 0.3);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     /* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay] */
     /* transition-duration: 0.2s; */
     /* transition-property: opacity; */
@@ -96,7 +101,7 @@ button {
     /* Styles the background color, font color, and text decoration
     (underline, etc.) of the button */
     background-color: #357b70;
-    color: #ffff; 
+    color: #ffff;
     text-decoration: none;
     /* Adds spacing to the button (This will be discussed more
     in depth later) */
@@ -104,7 +109,7 @@ button {
     border-radius: 10px;
     /* Gives the button a bottom border with a width of 2px, a type
     of solid, an a color in RGBA format */
-    border-bottom: 2px solid rgba(0,0, 0, 0.3);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     /* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay] */
     /* transition-duration: 0.2s; */
     /* transition-property: opacity; */
@@ -113,7 +118,10 @@ button {
 }
 
 /* Pseudo Classes: used to define a special state of an element */
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
     /* Lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     /* Reduces the opacity of the button to 80% */
@@ -130,8 +138,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 .profile {
     max-width: 700px;
     margin: 0 auto;
-    padding: 100px 0; /* Addins code this just to center the profile */
-    }
+    padding: 100px 0;
+    /* Addins code this just to center the profile */
+}
 
 .profile__portrait {
     float: left;
@@ -152,15 +161,16 @@ button:hover, button:focus, .button:hover, .button:focus {
 /* Grow=No / Shrink=yes / Base size of each element -> width=200px */
 .page-header__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;   /*Flex propierties */
+    -ms-flex: 0 1 200px;
+    flex: 0 1 200px;
+    /*Flex propierties */
 }
 
 /*Logo=200px of the screen, nav take rest, nav to the right*/
 .page-header__item:last-child {
     -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     text-align: right;
 }
 
@@ -175,17 +185,17 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .nav-list__item--active {
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 nav a {
     text-decoration: none;
-    position: relative;   
+    position: relative;
 }
 
 /* Border Out Animation */
 .border-out a::before {
-    position: absolute;    
+    position: absolute;
     left: 0px;
     width: 100%;
     height: 2px;
@@ -193,53 +203,53 @@ nav a {
     content: "";
     opacity: 0;
     -webkit-transition: all 0.3s;
-    transition: all 0.3s;    
-}
-.border-out a::after {
-    position: absolute;    
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: #357b70;
-    content: "";
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;    
+    transition: all 0.3s;
 }
 
-.border-out a::before
-{
+.border-out a::after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #357b70;
+    content: "";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.border-out a::before {
     top: 0px;
     -webkit-transform: translateY(30px);
-            transform: translateY(30px);    
+    transform: translateY(30px);
 }
 
-.border-out a::after
-{
+.border-out a::after {
     bottom: 0px;
     -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);    
+    transform: translateY(-30px);
 }
 
-.border-out a:hover::before, .border-out a:hover::after
-{
+.border-out a:hover::before,
+.border-out a:hover::after {
     opacity: 1;
     -webkit-transform: translateX(0);
-            transform: translateX(0)
+    transform: translateX(0)
 }
 
 
 /* -------FOOTER--------- */
 
 .page-footer {
-    clear: both;    /* This make free from the acction for Float: left */
+    clear: both;
+    /* This make free from the acction for Float: left */
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;    
-    -webkit-box-orient: vertical;    
-    -webkit-box-direction: normal;    
-        -ms-flex-direction: column;    
-            flex-direction: column;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -250,6 +260,7 @@ nav a {
     display: inline-block;
     width: 33%;
 }
+
 /* End of grid fallback for Older Browser*/
 
 @supports (display: grid) {
@@ -257,13 +268,13 @@ nav a {
         display: -ms-grid;
         display: grid;
         /*grid-template-columns: 300px 300px 300px;*/
-        /*grid-template-rows: 300px 300px;*/    
-        -ms-grid-columns: 1fr 10px 1fr 10px 1fr;    
+        /*grid-template-rows: 300px 300px;*/
+        -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
-        margin: 10px;        
+        margin: 10px;
     }
-    
+
     .grid__item {
         background-color: #d3d3d3;
         padding: 10px;
@@ -271,15 +282,15 @@ nav a {
         min-height: auto;
         /*margin: 0;         */
     }
-    
+
     .grid__item:last-child {
         /* This can be simplified 
         grid-column-start: 3;
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 3;
-        */    
-        -ms-grid-column: 3;    
+        */
+        -ms-grid-column: 3;
         grid-column: 3/3;
         -ms-grid-row: 1;
         -ms-grid-row-span: 2;
@@ -290,19 +301,21 @@ nav a {
 /* Sets default width of an element to include padding and border via the box-sizing property and border-box value */
 * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* ------Media Queries------- */
 
 @media all and (max-width: 750px) {
     #grid {
-        gap: 10px;        
+        gap: 10px;
     }
+
     .grid__item:last-child {
         grid-column: auto / auto;
         grid-row: auto / auto;
     }
+
     h1 {
         font-size: 22px;
     }
@@ -311,15 +324,15 @@ nav a {
 @media all and (min-width: 500px) and (max-width: 750px) {
     .grid {
         -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;      
-    } 
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media all and (max-width: 500px) {
     .grid {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    } 
+    }
 }
 
 /* -------------------------ABOUT PAGE------------------------- */
@@ -329,7 +342,7 @@ nav a {
     text-align: center;
 }
 
-.aboutme-list {    
+.aboutme-list {
     list-style-type: none;
     padding-left: 0;
 }
@@ -339,8 +352,8 @@ nav a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 25px auto;
 }
 
@@ -357,9 +370,10 @@ nav a {
     }
 
     100% {
-        fill: #f76414;        
+        fill: #f76414;
     }
 }
+
 @keyframes color-change {
     0% {
         fill: undefined;
@@ -370,9 +384,10 @@ nav a {
     }
 
     100% {
-        fill: #f76414;        
+        fill: #f76414;
     }
 }
+
 .sun {
     /*animation-duration: 4s;
     animation-name: color-change;
@@ -380,32 +395,36 @@ nav a {
     animation-direction: alternate;
     animation-timing-function: linear;*/
     -webkit-animation: 2s color-change infinite alternate linear;
-            animation: 2s color-change infinite alternate linear;
+    animation: 2s color-change infinite alternate linear;
 }
 
 /* Animation for Cloud in the Front */
 @-webkit-keyframes cloud-move {
     from {
         -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px);
+        transform: translate(0, 50px);
     }
+
     to {
         -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
+        transform: translate(200px, 50px);
 
     }
 }
+
 @keyframes cloud-move {
     from {
         -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px);
+        transform: translate(0, 50px);
     }
+
     to {
         -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
+        transform: translate(200px, 50px);
 
     }
 }
+
 .cloud-front {
     /*animation-duration: 30s;
     animation-name: cloud-move;
@@ -413,32 +432,35 @@ nav a {
     animation-direction: alternate;
     animation-timing-function: linear;*/
     -webkit-animation: 30s cloud-move infinite alternate linear;
-            animation: 30s cloud-move infinite alternate linear;
+    animation: 30s cloud-move infinite alternate linear;
 }
 
 /* Animation for cloud back */
 @-webkit-keyframes cloud-move-reverse {
     from {
         -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
     }
+
     to {
         -webkit-transform: translate(100px, 40px);
-                transform: translate(100px, 40px);
+        transform: translate(100px, 40px);
     }
 }
+
 @keyframes cloud-move-reverse {
     from {
         -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
     }
+
     to {
         -webkit-transform: translate(100px, 40px);
-                transform: translate(100px, 40px);
+        transform: translate(100px, 40px);
     }
 }
 
 .cloud-back {
     -webkit-animation: 34 cloud-move-reverse infinite alternate linear;
-            animation: 34 cloud-move-reverse infinite alternate linear;
+    animation: 34 cloud-move-reverse infinite alternate linear;
 }
