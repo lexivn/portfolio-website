@@ -2,13 +2,13 @@
 :root {
     --primary-color: #357b70;
     --secondary-color: #e0b354;
-    --link-viseited-color:#05676e;
+    --link-viseited-color: #05676e;
     --link-active-color: #489c79;
     --dark-grey: #2b2b2b;
-    --font-buttons-color: #ffff;    
-    --hometown-pic-color_0:#edc655;
-    --hometown-pic-color_50:#fcffad;
-    --hometown-pic-color_100:#f76414;
+    --font-buttons-color: #ffff;
+    --hometown-pic-color_0: #edc655;
+    --hometown-pic-color_50: #fcffad;
+    --hometown-pic-color_100: #f76414;
     --border-line-color: #d3d3d3;
     --grid-background-color: #d3d3d3;
 
@@ -16,13 +16,13 @@
     --font-weight-body: 400;
     --line-height-doby: 1.6;
 
-    --font-size-h1: 30px;    
+    --font-size-h1: 30px;
     --font-size-h2: 24px;
     --font-size-h3: 18px;
 
     --font-weight: 700;
 }
-    
+
 /* --------------GENERAL BODY--------------- */
 body {
     /*background-color: lightgray;   */
@@ -34,7 +34,8 @@ body {
     line-height: var(--line-height-doby);
 }
 
-main, section {
+main,
+section {
     width: 90%;
     max-width: 1500px;
     margin: 0 auto;
@@ -42,26 +43,30 @@ main, section {
 
 h1 {
     font-size: var(--font-size-h1);
-    font-weight: var(--font-weight); /*Blackness and Stroke thickness*/
+    font-weight: var(--font-weight);
+    /*Blackness and Stroke thickness*/
 }
 
 h2 {
     font-size: var(--font-size-h2);
-    font-weight: var(--font-weight); /*Blackness and Stroke thickness*/
+    font-weight: var(--font-weight);
+    /*Blackness and Stroke thickness*/
 }
 
 h3 {
     font-size: var(--font-size-h3);
-    font-weight: var(--font-weight); /*Blackness and Stroke thickness*/
+    font-weight: var(--font-weight);
+    /*Blackness and Stroke thickness*/
 }
 
 a {
     /*color: #357b70;       Replaced using variables */
-    color: var(--primary-color);    
+    color: var(--primary-color);
 }
 
 /* For Interactive Elements */
-a:hover, a:focus {
+a:hover,
+a:focus {
     /* No underlining when hovering over a link; Focus when using the keybboard */
     text-decoration: none;
 }
@@ -78,7 +83,8 @@ a:active {
     color: var(--link-active-color);
 }
 
-button, .button {
+button,
+.button {
     /* Overwrites browser defaults and resets the border */
     border: none;
     display: inline-block;
@@ -87,7 +93,7 @@ button, .button {
     /* Styles the background color, font color, and text decoration
     (underline, etc.) of the button */
     background-color: var(--primary-color);
-    color: var(--font-buttons-color); 
+    color: var(--font-buttons-color);
     text-decoration: none;
     /* Adds spacing to the button (This will be discussed more
     in depth later) */
@@ -95,7 +101,7 @@ button, .button {
     border-radius: 10px;
     /* Gives the button a bottom border with a width of 2px, a type
     of solid, an a color in RGBA format */
-    border-bottom: 2px solid rgba(0,0, 0, 0.3);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     /* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay] */
     /* transition-duration: 0.2s; */
     /* transition-property: opacity; */
@@ -103,7 +109,10 @@ button, .button {
 }
 
 /* Pseudo Classes: used to define a special state of an element */
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
     /* Lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     /* Reduces the opacity of the button to 80% */
@@ -120,8 +129,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 .profile {
     max-width: 700px;
     margin: 0 auto;
-    padding: 100px 0; /* Addins code this just to center the profile */
-    }
+    padding: 100px 0;
+    /* Addins code this just to center the profile */
+}
 
 .profile__portrait {
     float: left;
@@ -139,7 +149,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 /* Grow=No / Shrink=yes / Base size of each element -> width=200px */
 .page-header__item {
-    flex: 0 1 200px;   /*Flex propierties */
+    flex: 0 1 200px;
+    /*Flex propierties */
 }
 
 /*Logo=200px of the screen, nav take rest, nav to the right*/
@@ -159,40 +170,39 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .nav-list__item--active {
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 nav a {
     text-decoration: none;
-    position: relative;   
+    position: relative;
 }
 
 /* Border Out Animation */
-.border-out a::before, .border-out a::after {
-    position: absolute;    
+.border-out a::before,
+.border-out a::after {
+    position: absolute;
     left: 0px;
     width: 100%;
     height: 2px;
     background: var(--primary-color);
     content: "";
     opacity: 0;
-    transition: all 0.3s;    
+    transition: all 0.3s;
 }
 
-.border-out a::before
-{
+.border-out a::before {
     top: 0px;
-    transform: translateY(30px);    
+    transform: translateY(30px);
 }
 
-.border-out a::after
-{
+.border-out a::after {
     bottom: 0px;
-    transform: translateY(-30px);    
+    transform: translateY(-30px);
 }
 
-.border-out a:hover::before, .border-out a:hover::after
-{
+.border-out a:hover::before,
+.border-out a:hover::after {
     opacity: 1;
     transform: translateX(0)
 }
@@ -201,8 +211,9 @@ nav a {
 /* -------FOOTER--------- */
 
 .page-footer {
-    clear: both;    /* This make free from the acction for Float: left */
-    display: flex;    
+    clear: both;
+    /* This make free from the acction for Float: left */
+    display: flex;
     flex-direction: column;
     text-align: center;
 }
@@ -214,18 +225,19 @@ nav a {
     display: inline-block;
     width: 33%;
 }
+
 /* End of grid fallback for Older Browser*/
 
 @supports (display: grid) {
     .grid {
         display: grid;
         /*grid-template-columns: 300px 300px 300px;*/
-        /*grid-template-rows: 300px 300px;*/    
+        /*grid-template-rows: 300px 300px;*/
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
-        margin: 10px;        
+        margin: 10px;
     }
-    
+
     .grid__item {
         background-color: #d3d3d3;
         padding: 10px;
@@ -233,14 +245,14 @@ nav a {
         min-height: auto;
         /*margin: 0;         */
     }
-    
+
     .grid__item:last-child {
         /* This can be simplified 
         grid-column-start: 3;
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 3;
-        */    
+        */
         grid-column: 3/3;
         grid-row: 1/3;
     }
@@ -255,12 +267,14 @@ nav a {
 
 @media all and (max-width: 750px) {
     #grid {
-        gap: 10px;        
+        gap: 10px;
     }
+
     .grid__item:last-child {
         grid-column: auto / auto;
         grid-row: auto / auto;
     }
+
     h1 {
         font-size: 22px;
     }
@@ -268,14 +282,14 @@ nav a {
 
 @media all and (min-width: 500px) and (max-width: 750px) {
     .grid {
-        grid-template-columns: 1fr 1fr;      
-    } 
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media all and (max-width: 500px) {
     .grid {
         grid-template-columns: 1fr;
-    } 
+    }
 }
 
 /* -------------------------ABOUT PAGE------------------------- */
@@ -285,7 +299,7 @@ nav a {
     text-align: center;
 }
 
-.aboutme-list {    
+.aboutme-list {
     list-style-type: none;
     padding-left: 0;
 }
@@ -309,9 +323,10 @@ nav a {
     }
 
     100% {
-        fill: var(--hometown-pic-color_100);        
+        fill: var(--hometown-pic-color_100);
     }
 }
+
 .sun {
     /*animation-duration: 4s;
     animation-name: color-change;
@@ -326,11 +341,13 @@ nav a {
     from {
         transform: translate(0, 50px);
     }
+
     to {
         transform: translate(200px, 50px);
 
     }
 }
+
 .cloud-front {
     /*animation-duration: 30s;
     animation-name: cloud-move;
@@ -345,6 +362,7 @@ nav a {
     from {
         transform: translate(446px, 48px);
     }
+
     to {
         transform: translate(100px, 40px);
     }
